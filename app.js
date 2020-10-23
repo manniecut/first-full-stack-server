@@ -1,7 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors')
-
 const app = express();
 
 app.use(morgan('common'));
@@ -37,6 +36,9 @@ app.get('/apps', (req, res) => {
     res.json(results);
 })
 
+module.exports=app;
+
+/*
 app.listen(8000, () => {
     console.log('Listenin on PORT 8000');
-})
+})*/
