@@ -1,4 +1,3 @@
-//write tests using Mocha, Chai, and SuperTest to adequately test the endpoints that you have written.
 const { expect } = require('chai');
 const supertest = require('supertest');
 const app = require('../app');
@@ -15,7 +14,7 @@ describe('Testing response with queries', () => {
     it('should return 200 w/query responses', () => {
         return supertest(app)
             .get('/apps')
-            .query({genre: "action", sort: "rating"})
+            .query({ genre: "action", sort: "rating" })
             .expect(200)
             .expect('Content-Type', /json/)
             .then(res => {

@@ -28,15 +28,15 @@ app.get('/apps', (req, res) => {
 
     if (sort) {
         results
-        .sort((a, b) => {
-            return a[sort] > b[sort] ? 1 : a[sort] < b[sort] ? -1 : 0;
-        });
+            .sort((a, b) => {
+                return a[sort] > b[sort] ? 1 : a[sort] < b[sort] ? -1 : 0;
+            });
     }
 
     res.json(results);
 })
 
-module.exports=app;
+module.exports = app;
 
 /*
 app.listen(8000, () => {
